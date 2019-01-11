@@ -4,12 +4,12 @@ The package service is responsible for managing packages which aggregate multipl
 
 ## API
 
-### Create a new Package
-**URL** : `/v1/package`
-**Method** : `POST`
-**Success code** : `201 CREATED`
-**Example**
-POST /v1/package
+### Create a new Package  
+**URL** : `/v1/package`  
+**Method** : `POST`  
+**Success code** : `201 CREATED`  
+**Example**  
+POST `/v1/package`  
 ```json
 {
 	"name": "test",
@@ -17,15 +17,14 @@ POST /v1/package
 	"products" : ["VqKb4tyj9V6i"]
 }
 ```
----
-201
+Returns 201  
 
-### Update a Package
-**URL** : `/v1/package/{packageId}`
-**Method** : `PUT`
-**Success code** : `202 ACCEPTED`
-**Example**
-PUT /v1/package/{packageId}
+### Update a Package  
+**URL** : `/v1/package/{packageId}`  
+**Method** : `PUT`  
+**Success code** : `202 ACCEPTED`  
+**Example**  
+PUT `/v1/package/{packageId}`  
 ```json
 {
 	"name": "test 2",
@@ -33,18 +32,16 @@ PUT /v1/package/{packageId}
 	"products" : ["xxxxxx"]
 }
 ```
----
-202
+Returns 202  
 
-### Retrieve a package
-**URL** : `/v1/package/{packageId}`
-**Method** : `GET`
-**Parameters** : currencyCode (defaults to USD)
-**Success code** : `200 OK`
-**Example**
-GET /v1/package/1?currencyCode=GBP
----
-200
+### Retrieve a package  
+**URL** : `/v1/package/{packageId}`  
+**Method** : `GET`  
+**Parameters** : currencyCode (defaults to USD)  
+**Success code** : `200 OK`  
+**Example**  
+GET `/v1/package/1?currencyCode=GBP`  
+Returns 200  
 ```json
 {
     "id": 1,
@@ -58,15 +55,14 @@ GET /v1/package/1?currencyCode=GBP
 }
 ```
 
-### Retrieve all packages
-**URL** : `/v1/package`
-**Method** : `GET`
-**Parameters** : currencyCode (defaults to USD)
-**Success code** : `200 OK`
-**Example**
-GET /v1/package?currencyCode=GBP
----
-200
+### Retrieve all packages  
+**URL** : `/v1/package`  
+**Method** : `GET`  
+**Parameters** : currencyCode (defaults to USD)  
+**Success code** : `200 OK`  
+**Example**  
+GET `/v1/package?currencyCode=GBP`  
+Returns 200  
 ```json
 [
      {
@@ -90,18 +86,16 @@ GET /v1/package?currencyCode=GBP
  ]
 ```
  
-### Delete a package
-**URL** : `/v1/package/{packageId}`
-**Method** : `DELETE`
-**Success code** : `202 ACCEPTED`
-**Example**
-DELETE /v1/package/1
- ---
-202
+### Delete a package  
+**URL** : `/v1/package/{packageId}`  
+**Method** : `DELETE`  
+**Success code** : `202 ACCEPTED`  
+**Example**  
+DELETE `/v1/package/1`  
+Returns 202  
 
-
-## Running the service
-To build run `mvn clean install`
-To run locally run `mvn -pl application spring-boot:run`
-To run in production `java -jar application/target/application-GIT-SNAPSHOT.jar`
+## Running the service  
+To build run `mvn clean install`  
+To run locally run `mvn -pl application spring-boot:run`  
+To run in production `java -jar application/target/application-GIT-SNAPSHOT.jar  
 
